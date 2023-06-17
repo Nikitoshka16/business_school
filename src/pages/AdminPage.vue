@@ -102,7 +102,7 @@ export default {
         },
         async fetchStats(){
             try {
-                const response = await axios.get('http://127.0.0.1:80/stats');
+                const response = await axios.get('http://127.0.0.1:50/stats');
                 console.log(response)
                 this.stats = response.data
             }catch (e){
@@ -111,7 +111,7 @@ export default {
         },
         async blockUser(user){
             this.user = this.users.filter(u => u.id === user.id)
-            axios.post('http://127.0.0.1:80/block', {user: this.user})
+            axios.post('http://127.0.0.1:50/block', {user: this.user})
                 .then(res => {
                     console.log(res)
                     if (res.status === 200 && res.data === 'success') {
@@ -124,7 +124,7 @@ export default {
         },
         async unblockUser(user){
             this.user = this.users.filter(u => u.id === user.id)
-            axios.post('http://127.0.0.1:80/unblock', {user: this.user})
+            axios.post('http://127.0.0.1:50/unblock', {user: this.user})
                 .then(res => {
                     console.log(res)
                     if (res.status === 200 && res.data === 'success') {
@@ -137,7 +137,7 @@ export default {
         },
         async fetchUsers(){
             try {
-                const response = await axios.get('http://127.0.0.1:80/users');
+                const response = await axios.get('http://127.0.0.1:50/users');
                 console.log(response)
                 this.users = response.data
             }catch (e){
@@ -145,7 +145,7 @@ export default {
             }
         },
         async registerUser(){
-            axios.post('http://127.0.0.1:80/register', {
+            axios.post('http://127.0.0.1:50/register', {
                     nameUser: this.nameUser,
                     psw1: this.firstPsw,
                     psw2: this.secondPsw,
