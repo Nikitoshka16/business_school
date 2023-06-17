@@ -145,7 +145,7 @@ export default {
           this.textMsg = ''
         },
         savePatern(){
-            axios.post('http://127.0.0.1:50/savepatern',{
+            axios.post('http://45.12.236.247:50/savepatern',{
                 msg: this.textMsg,
                 subject: this.subjectMsg,
                 preview: this.preview
@@ -168,7 +168,7 @@ export default {
             this.clients =this.clients.filter(c => c.clients_id !== client.clients_id)
         },
         removePatern(patern){
-            axios.post('http://127.0.0.1:50/removepatern',{patern_id: patern.id})
+            axios.post('http://45.12.236.247:50/removepatern',{patern_id: patern.id})
                 .then(res => {
                     if (res.status === 200 && res.data === 'success') {
                         console.log('Удаление успешно')
@@ -180,7 +180,7 @@ export default {
         },
         async fetchClients(){
             try {
-                const response = await axios.get('http://127.0.0.1:50/clients');
+                const response = await axios.get('http://45.12.236.247:50/clients');
                 console.log(response)
                 this.clients = response.data
             }catch (e){
@@ -191,7 +191,7 @@ export default {
             let arr = window.location.href.split('/')
             let id = arr[arr.length-1]
             try {
-                const response = await axios.get('http://127.0.0.1:50/stats');
+                const response = await axios.get('http://45.12.236.247:50/stats');
                 console.log(response)
                 this.stats = response.data
                 console.log(id)
@@ -206,7 +206,7 @@ export default {
         async loadPatern(){
             this.paternVisible = true;
             try {
-                const response = await axios.get('http://127.0.0.1:50/getpatern');
+                const response = await axios.get('http://45.12.236.247:50/getpatern');
                 console.log(response)
                 this.paterns = response.data
             }catch (e){
@@ -241,7 +241,7 @@ export default {
             let arr = window.location.href.split('/')
             let id = arr[arr.length-1]
 
-            axios.post('http://127.0.0.1:50/mail',{
+            axios.post('http://45.12.236.247:50/mail',{
                 userId: id,
                 clients: this.clients,
                 msg: this.textMsg,
