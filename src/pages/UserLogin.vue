@@ -52,7 +52,7 @@ export default {
     },
     methods: {
         authUser(){
-            axios.post('http://127.0.0.1:5000/login', {login: this.userLogin, password: this.userPassword})
+            axios.post('http://127.0.0.1:80/login', {login: this.userLogin, password: this.userPassword})
                 .then(res => {
                     console.log(res)
                     if (res.status === 200 && res.data['admin'] === false) {
