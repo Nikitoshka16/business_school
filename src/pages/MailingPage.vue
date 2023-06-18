@@ -227,7 +227,7 @@ export default {
             this.clients = this.clients.filter(client => client.sex.toLowerCase().includes(searchQuery.searchSex.toLowerCase()))
             this.clients = this.clients.filter(client => client.fullage >= searchQuery.searchAge)
             this.clients = this.clients.filter(client => client.dateofbirth.includes(searchQuery.searchDateOfBirth))
-            // this.clients = this.clients.filter(client => client.faculty.toLowerCase().includes(searchQuery.searchFaculty.toLowerCase()))
+            this.clients = this.clients.filter(client => client.faculty.toLowerCase().includes(searchQuery.searchFaculty.toLowerCase()))
             // this.clients = this.clients.filter(client => client.specialty.toLowerCase().includes(searchQuery.searchSpecialty.toLowerCase()))
             // this.clients = this.clients.filter(client => client.university.toLowerCase().includes(searchQuery.searchUniversity.toLowerCase()))
         },
