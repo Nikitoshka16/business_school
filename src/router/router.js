@@ -18,12 +18,12 @@ const routes = [
         component: UserLogin
     },
     {
-        path: '/mailing/:role/:id',
+        path: '/mailing/:role?/:id?',
         name: 'mailingPage',
         component: MailingPage
     },
     {
-        path: '/admin/:role/:id',
+        path: '/admin/:role?/:id?',
         name: 'adminPage',
         component: AdminPage
     }
