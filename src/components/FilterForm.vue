@@ -89,7 +89,7 @@ export default {
     methods:{
         async fetchClients(){
             try {
-                const response = await axios.get('http://127.0.0.1:5000/clients');
+                const response = await axios.get('http://45.12.236.247:50/clients');
                 this.$emit('create', response)
             }catch (e){
                 console.log(e)
