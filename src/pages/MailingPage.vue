@@ -217,7 +217,7 @@ export default {
             this.confirmVisible = true;
         },
         updateClients(response){
-            this.clients = response.data
+            this.fetchClients();
         },
         searchedClients(searchQuery){
             console.log(searchQuery)
