@@ -222,7 +222,7 @@ export default {
         searchedClients(searchQuery){
             console.log(searchQuery)
             this.clients = this.clients.filter(client => client.name.toLowerCase().includes(searchQuery.searchName.toLowerCase()))
-            // this.clients = this.clients.filter(client => client.surname.toLowerCase().includes(searchQuery.searchSurname.toLowerCase()))
+            this.clients = this.clients.filter(client => client.surname.toLowerCase().includes(searchQuery.searchSurname.toLowerCase()))
             // this.clients = this.clients.filter(client => client.region.toLowerCase().includes(searchQuery.searchRegion.toLowerCase()))
             this.clients = this.clients.filter(client => client.sex.toLowerCase().includes(searchQuery.searchSex.toLowerCase()))
             // this.clients = this.clients.filter(client => client.fullage >= searchQuery.searchAge)
