@@ -222,14 +222,14 @@ export default {
         searchedClients(searchQuery){
             console.log(searchQuery)
             this.clients = this.clients.filter(client => client.name.toLowerCase().includes(searchQuery.searchName.toLowerCase()))
-            // this.clients = this.clients.filter(client => client.surname.toLowerCase().includes(searchQuery.searchSurname.toLowerCase()))
-            // this.clients = this.clients.filter(client => client.region.toLowerCase().includes(searchQuery.searchRegion.toLowerCase()))
+            this.clients = this.clients.filter(client => client.surname.toLowerCase().includes(searchQuery.searchSurname.toLowerCase()))
+            this.clients = this.clients.filter(client => client.region.toLowerCase().includes(searchQuery.searchRegion.toLowerCase()))
             this.clients = this.clients.filter(client => client.sex.toLowerCase().includes(searchQuery.searchSex.toLowerCase()))
-            // this.clients = this.clients.filter(client => client.fullage >= searchQuery.searchAge)
-            // this.clients = this.clients.filter(client => client.dateofbirth.includes(searchQuery.searchDateOfBirth))
-            // this.clients = this.clients.filter(client => client.faculty.toLowerCase().includes(searchQuery.searchFaculty.toLowerCase()))
-            // this.clients = this.clients.filter(client => client.specialty.toLowerCase().includes(searchQuery.searchSpecialty.toLowerCase()))
-            // this.clients = this.clients.filter(client => client.university.toLowerCase().includes(searchQuery.searchUniversity.toLowerCase()))
+            this.clients = this.clients.filter(client => client.fullage >= searchQuery.searchAge)
+            this.clients = this.clients.filter(client => client.dateofbirth.includes(searchQuery.searchDateOfBirth))
+            this.clients = this.clients.filter(client => client.faculty.toLowerCase().includes(searchQuery.searchFaculty.toLowerCase()))
+            this.clients = this.clients.filter(client => client.specialty.toLowerCase().includes(searchQuery.searchSpecialty.toLowerCase()))
+            this.clients = this.clients.filter(client => client.university.toLowerCase().includes(searchQuery.searchUniversity.toLowerCase()))
         },
         hideDialog(){
             this.confirmVisible = false
